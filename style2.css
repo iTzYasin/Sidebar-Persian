@@ -1,0 +1,91 @@
+@font-face {
+    font-family: comfortaa;
+    src: url(Comfortaa-VariableFont_wght.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: comfortaa;
+    transition: 0.5s;
+    direction: rtl;
+    
+}
+:root{
+    --dcolor:#010101;
+    --wcolor:#fbeea8;
+    --lcolor:#a6eda1;
+}
+#tick{display: none;}
+#menu , #close{
+    position: fixed;
+    font-size: 1.5rem;
+    color: var(--wcolor);
+    border: 1px solid var(--wcolor);
+    border-radius: 5px;
+    cursor: pointer;
+}
+#menu{
+    top: 25px;
+    right: 25px;
+    padding:10px 15px;
+}
+
+#close{
+    right:-300px;
+    top: 25px;
+    padding: 5px 10px;
+
+}
+#tick:checked ~ .sidebar{right: 0;}
+#tick:checked ~ label #close{right: 230px; z-index: 1;}
+#tick:checked ~ section{margin-right: 300px;}
+.sidebar{
+    height: 100%;
+    width: 300px;
+    background: var(--dcolor);
+    position: fixed;
+    left: 80%;
+    right: -300px;
+}
+.sidebar h1{
+    color: var(--wcolor);
+    font-size: 1.8rem;
+    background-color: #1b1b1b;
+    padding: 1.5rem;
+}
+.sidebar ul{
+    list-style: none;
+   
+} 
+.sidebar i{
+    padding-left:1.5rem
+}
+.sidebar ul li{
+    padding: 1.5rem;
+    color: var(--lcolor);
+    cursor: pointer;
+    font-size: 1.5rem;
+
+}
+.sidebar li:hover{
+    background-color: var(--lcolor);
+    color: var(--dcolor);
+    margin-right: 2rem;
+}
+.sidebar ul li i{
+    margin-right: 0.8rem;
+    
+}
+.sidebar li:hover i{
+    transform: rotate(1turn);
+    color: var(--dcolor);
+}
+section{
+    height: 100vh;
+    background: url(8.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
